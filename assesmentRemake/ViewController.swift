@@ -79,7 +79,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = ElementsTableView.dequeueReusableCell(withIdentifier: "elementCell", for: indexPath) as! ElementsTableViewCell
         let currentElement = elements[indexPath.row]
         cell.nameLabel.text = currentElement.name
-        
+        cell.egLabel.text = "\(currentElement.atomicMass)"
         
         
         ImageHelper.shared.getImage(urlStr: currentElement.thumbnailImageURL) { (result) in
